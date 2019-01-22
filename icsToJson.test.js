@@ -5,6 +5,7 @@ VERSION:2.0
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
 SUMMARY:Access-A-Ride Pickup
+CATEGORIES:Visitors
 DTSTART;TZID=America/New_York:20130802T103400
 DTEND;TZID=America/New_York:20130802T110400
 LOCATION:1000 Broadway Ave.\, Brooklyn
@@ -38,6 +39,7 @@ const sampleResult = [
     startDate: "20130802T103400",
     endDate: "20130802T110400",
     description: "Access-A-Ride to 900 Jay St., Brooklyn",
+    categories: "Visitors",
     location: "1000 Broadway Ave., Brooklyn",
     summary: "Access-A-Ride Pickup"
   },

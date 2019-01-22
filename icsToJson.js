@@ -9,11 +9,13 @@ const DESCRIPTION = "DESCRIPTION";
 const SUMMARY = "SUMMARY";
 const LOCATION = "LOCATION";
 const ALARM = "VALARM";
+const CATEGORIES = "CATEGORIES";
 
 const keyMap = {
   [START_DATE]: "startDate",
   [END_DATE]: "endDate",
   [DESCRIPTION]: "description",
+  [CATEGORIES]: "categories",
   [SUMMARY]: "summary",
   [LOCATION]: "location"
 };
@@ -74,6 +76,9 @@ const icsToJson = icsData => {
       case SUMMARY:
         currentObj[keyMap[SUMMARY]] = clean(value);
         break;
+      case CATEGORIES:
+          currentObj[keyMap[CATEGORIES]] = clean(value);
+          break;
       case LOCATION:
         currentObj[keyMap[LOCATION]] = clean(value);
       default:
