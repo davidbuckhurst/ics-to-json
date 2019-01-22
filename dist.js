@@ -19,7 +19,8 @@ var DESCRIPTION = "DESCRIPTION";
 var SUMMARY = "SUMMARY";
 var LOCATION = "LOCATION";
 var ALARM = "VALARM";
-var keyMap = (_keyMap = {}, _defineProperty(_keyMap, START_DATE, "startDate"), _defineProperty(_keyMap, END_DATE, "endDate"), _defineProperty(_keyMap, DESCRIPTION, "description"), _defineProperty(_keyMap, SUMMARY, "summary"), _defineProperty(_keyMap, LOCATION, "location"), _keyMap);
+var CATEGORIES = "CATEGORIES";
+var keyMap = (_keyMap = {}, _defineProperty(_keyMap, START_DATE, "startDate"), _defineProperty(_keyMap, END_DATE, "endDate"), _defineProperty(_keyMap, DESCRIPTION, "description"), _defineProperty(_keyMap, CATEGORIES, "categories"), _defineProperty(_keyMap, SUMMARY, "summary"), _defineProperty(_keyMap, LOCATION, "location"), _keyMap);
 
 var clean = function clean(string) {
   return unescape(string).trim();
@@ -82,6 +83,10 @@ var icsToJson = function icsToJson(icsData) {
 
       case SUMMARY:
         currentObj[keyMap[SUMMARY]] = clean(value);
+        break;
+
+      case CATEGORIES:
+        currentObj[keyMap[CATEGORIES]] = clean(value);
         break;
 
       case LOCATION:
